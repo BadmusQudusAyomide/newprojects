@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Get Latitude from Google Maps</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+      function getLatitude() {
+        // Create a new Google Maps instance
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: 0, lng: 0 },
+          zoom: 8
+        });
+
+        // Get the user's current location
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var latitude = position.coords.latitude;
+            alert('Latitude: ' + latitude);
+          });
+        } else {
+          alert('Geolocation is not supported by this browser.');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Get Latitude from Google Maps</h1>
+    <button onclick="getLatitude()">Get Latitude</button>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+  </body>
+</html>
+7.759595350103007, 4.603606706305376
+7.760190505321708, 4.602922479566208

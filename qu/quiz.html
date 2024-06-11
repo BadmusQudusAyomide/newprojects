@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz Application</h1>
+            <button id="upload-question-btn">Upload Question</button>
+        </header>
+        <main>
+            <section id="upload-question-section" style="display:none;">
+                <h2>Upload Question</h2>
+                <form id="upload-question-form" enctype="multipart/form-data">
+                    <textarea id="question" placeholder="Enter your question" required></textarea>
+                    <input type="file" id="image" accept="image/*">
+                    <input type="text" id="option1" placeholder="Option 1" required>
+                    <input type="text" id="option2" placeholder="Option 2" required>
+                    <input type="text" id="option3" placeholder="Option 3" required>
+                    <input type="text" id="option4" placeholder="Option 4" required>
+                    <input type="text" id="correct_option" placeholder="Correct Option" required>
+                    <button type="submit">Upload</button>
+                </form>
+            </section>
+            <section id="quiz-section">
+                <h2>Quiz</h2>
+                <div id="quiz-content"></div>
+                <div id="timer">Time left: <span id="time"></span></div>
+                <button id="submit-quiz">Submit Quiz</button>
+                <div id="quiz-result"></div>
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

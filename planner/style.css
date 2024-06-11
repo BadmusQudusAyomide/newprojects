@@ -1,0 +1,77 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+#add-course-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main {
+  padding: 1rem;
+}
+
+#courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.course {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.course h3 {
+  margin-bottom: 0.5rem;
+}
+
+.course-details {
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.course-details input,
+.course-details select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  flex: 1; /* Make inputs flexible to fill available space */
+}
+
+.course-details button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+@media only screen and (max-width: 768px) {
+  #courses {
+    grid-template-columns: 1fr;
+  }
+  .course-details {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+}

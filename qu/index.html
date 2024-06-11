@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz Application</h1>
+            <nav>
+                <button id="login-btn">Login</button>
+                <button id="register-btn">Register</button>
+            </nav>
+        </header>
+        <main>
+            <section class="auth" id="auth-section">
+                <div id="login-form" style="display:none;">
+                    <h2>Login</h2>
+                    <form id="login">
+                        <input type="email" id="login-email" placeholder="Email" required>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div id="register-form" style="display:none;">
+                    <h2>Register</h2>
+                    <form id="register">
+                        <input type="text" id="register-name" placeholder="Name" required>
+                        <input type="email" id="register-email" placeholder="Email" required>
+                        <input type="password" id="register-password" placeholder="Password" required>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

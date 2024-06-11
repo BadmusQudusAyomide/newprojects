@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Schedule Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Study Schedule Planner</h1>
+        </header>
+        <main>
+            <section class="add-task">
+                <h2>Add a New Task</h2>
+                <form id="task-form">
+                    <input type="text" id="task-name" placeholder="Task Name" required>
+                    <input type="datetime-local" id="task-date" required>
+                    <button type="submit">Add Task</button>
+                </form>
+            </section>
+            <section class="task-list">
+                <h2>Scheduled Tasks</h2>
+                <ul id="tasks"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
