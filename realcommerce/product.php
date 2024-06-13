@@ -22,16 +22,7 @@ $product = $stmt->fetch();
 <body>
     <header>
         <h1 class="up coll">Product Name: <?php echo $product['name']; ?></h1>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="products.php">Products</a></li>
-                <li><a href="cart.php">Cart (<span id="cart-count">0</span>)</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="register.php">Register</a></li>
-            </ul>
-            <button id="menu-toggle">☰</button>
-        </nav>
+      
     </header>
     <div class="product-detail">
      

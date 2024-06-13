@@ -16,17 +16,8 @@ $products = $stmt->fetchAll();
 </head>
 <body>
     <header>
-        <h1>Welcome to My E-commerce Site</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="products.php">Products</a></li>
-                <li><a href="cart.php">Cart (<span id="cart-count">0</span>)</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="register.php">Register</a></li>
-            </ul>
-            <button id="menu-toggle">☰</button>
-        </nav>
+
+       
     </header>
     <main>
         <div class="products">
