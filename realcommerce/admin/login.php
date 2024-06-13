@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </main>
     <footer>
-        <p>&copy; 2024 E-commerce Site</p>
+        <p>&copy; E-commerce Site</p>
     </footer>
 </body>
 
