@@ -1,8 +1,9 @@
-<?php
-session_start();
+<?php 
 include '../includes/db_connect.php';
 include '../includes/functions.php';
-redirectIfNotAdmin();
+// include '../includes/header.php';
+
+// redirectIfNotAdmin();
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +13,7 @@ redirectIfNotAdmin();
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="js/scripts.js" defer></script>
+    <link rel="stylesheet" href="../css/styless.css">
 </head>
 
 <body>

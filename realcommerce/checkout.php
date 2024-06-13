@@ -1,6 +1,8 @@
 <?php
-session_start();
+// session_start();
 include 'includes/db_connect.php';
+  $pageTitle = "Checkout";
+include 'includes/header.php';
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
@@ -44,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <title>Checkout</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styless.css">
 </head>
 <body>
     <header>

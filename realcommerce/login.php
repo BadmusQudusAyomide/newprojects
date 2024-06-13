@@ -1,5 +1,6 @@
 <?php
 include 'includes/db_connect.php';
+// include 'includes/pre_login_header.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

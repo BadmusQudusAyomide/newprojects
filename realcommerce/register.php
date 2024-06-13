@@ -1,5 +1,6 @@
 <?php
 include 'includes/db_connect.php';
+// include 'includes/pre_login_header.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
@@ -8,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
     $stmt->execute([$username, $email, $password]);
-
+   
     header('Location: login.php');
 }
 ?>

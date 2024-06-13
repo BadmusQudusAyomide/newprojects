@@ -9,5 +9,5 @@ $product_id = $_GET['id'];
 $stmt = $conn->prepare("DELETE FROM products WHERE id = ?");
 $stmt->execute([$product_id]);
 
-header('Location: manage_products.php');
+header('Location: admin/manage_products.php');
 ?>

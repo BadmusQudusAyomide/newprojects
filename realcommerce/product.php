@@ -5,6 +5,8 @@ $product_id = $_GET['id'];
 $stmt = $conn->prepare("SELECT * FROM products WHERE id = ?");
 $stmt->execute([$product_id]);
 $product = $stmt->fetch();
+$pageTitle = $product['name']; // Set the page title
+include 'includes/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +18,7 @@ $product = $stmt->fetch();
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/styless.css">
     <title><?php echo $product['name']; ?></title>
 </head>
 

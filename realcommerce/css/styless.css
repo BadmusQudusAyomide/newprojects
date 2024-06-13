@@ -1,0 +1,227 @@
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Hero section */
+.hero {
+    background: url('../img/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+.hero .btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background: #e65c00;
+}
+
+/* Featured products section */
+.featured-products {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.featured-products h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card h4 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #333;
+}
+
+.product-card .btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.product-card .btn:hover {
+    background: #0056b3;
+}
+
+/* About us section */
+.about-us {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-us h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.about-us .btn {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.about-us .btn:hover {
+    background: #218838;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.profile-section {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-section input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-section button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-section button:hover {
+    background-color: #218838;
+}
+
+.profile-section .success {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -1,7 +1,7 @@
 <?php
 include '../includes/db_connect.php';
 include '../includes/functions.php';
-session_start();
+// session_start();
 redirectIfNotAdmin();
 
 $stmt = $conn->prepare("SELECT * FROM orders");

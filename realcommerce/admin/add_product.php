@@ -2,7 +2,8 @@
 <?php
 include '../includes/db_connect.php';
 include '../includes/functions.php';
-session_start();
+include '../includes/header.php';
+
 redirectIfNotAdmin();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

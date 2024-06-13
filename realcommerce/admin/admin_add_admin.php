@@ -1,15 +1,17 @@
+
 <?php
-session_start();
+// session_start();
 include '../includes/db_connect.php';
 include '../includes/functions.php';
-redirectIfNotAdmin();
+// include '../includes/header.php';
+// redirectIfNotAdmin();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, 'admin')");
+    $stmt = $conn->prepare("INSERT INTO admins (username, email, password) VALUES (?, ?, ?)");
     $stmt->execute([$username, $email, $password]);
 
     $message = "New admin account created successfully!";
@@ -22,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <title>Add New Admin</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styless.css">
 </head>
 <body>
     <header>

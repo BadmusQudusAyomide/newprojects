@@ -1,19 +1,21 @@
 <?php
 include '../includes/db_connect.php';
+$pageTitle = "Login";
+include '../includes/header.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND role = 'admin'");
+    $stmt = $conn->prepare("SELECT * FROM admins WHERE username = ?");
     $stmt->execute([$username]);
     $user = $stmt->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['admin_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
-        $_SESSION['role'] = $user['role'];
+      
         header('Location: index.php');
     } else {
         $error = "Invalid username or password";
@@ -28,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <title>Admin Login</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styless.css">
 </head>
 
 <body>

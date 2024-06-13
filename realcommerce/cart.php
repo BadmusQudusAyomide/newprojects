@@ -1,6 +1,9 @@
 <?php
-session_start();
+// session_start();
 include 'includes/db_connect.php';
+$pageTitle = "Cart";
+include 'includes/header.php';
+
 
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
@@ -23,6 +26,7 @@ if ($_GET['action'] == 'remove') {
     $product_id = $_GET['id'];
     unset($_SESSION['cart'][$product_id]);
     header('Location: cart.php');
+
 }
 
 $total = 0;
@@ -34,6 +38,7 @@ $total = 0;
     <meta charset="UTF-8">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styless.css">
 </head>
 <body>
     <header>
@@ -64,14 +69,14 @@ $total = 0;
                             <tr>
                                 <td><?php echo $product['name']; ?></td>
                                 <td><?php echo $quantity; ?></td>
-                                <td>$<?php echo $product['price']; ?></td>
-                                <td>$<?php echo $subtotal; ?></td>
+                                <td>₦<?php echo $product['price']; ?></td>
+                                <td>₦<?php echo $subtotal; ?></td>
                                 <td><a href="cart.php?action=remove&id=<?php echo $product_id; ?>">Remove</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <h3>Total: $<?php echo $total; ?></h3>
+                <h3>Total: ₦<?php echo $total; ?></h3>
                 <a href="checkout.php">Proceed to Checkout</a>
             <?php else: ?>
                 <p>Your cart is empty.</p>

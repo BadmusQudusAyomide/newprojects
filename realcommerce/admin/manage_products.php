@@ -1,6 +1,6 @@
 
 <?php
-session_start();
+// session_start();
 include '../includes/db_connect.php';
 include '../includes/functions.php';
 redirectIfNotAdmin();
