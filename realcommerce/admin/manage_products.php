@@ -3,7 +3,7 @@
 // session_start();
 include '../includes/db_connect.php';
 include '../includes/functions.php';
-redirectIfNotAdmin();
+// redirectIfNotAdmin();
 
 $stmt = $conn->prepare("SELECT * FROM products");
 $stmt->execute();

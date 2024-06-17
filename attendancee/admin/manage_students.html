@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Students</title>
+    <link rel="stylesheet" href="css/admin_style.css">
+</head>
+
+<body>
+    <h1>Manage Students</h1>
+    <form action="../php/add_student.php" method="post">
+        <input type="text" name="student_id" placeholder="Student ID" required>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="submit" value="Add Student">
+    </form>
+    <h2>Student List</h2>
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="../js/admin_script.js"></script>
+</body>
+
+</html>

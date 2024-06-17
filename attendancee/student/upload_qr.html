@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload QR Code</title>
+    <link rel="stylesheet" href="css/student_style.css">
+</head>
+
+<body>
+    <h1>Upload QR Code to Mark Attendance</h1>
+    <form>
+        <input type="file" id="qrInput" accept="image/*" required>
+        <input type="button" value="Scan QR Code" onclick="scanQRCode()">
+        <div id="result"></div>
+        <div id="reader" style="width: 600px;"></div>
+    </form>
+    <script src="../js/html5-qrcode.min.js"></script>
+    <script src="../js/student_script.js"></script>
+</body>
+
+</html>

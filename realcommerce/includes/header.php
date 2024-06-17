@@ -11,6 +11,7 @@ include 'db_connect.php';
     <meta charset="UTF-8">
     <title><?php echo $pageTitle; ?></title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styless.css">
     <script src="js/scripts.js" defer></script>
 </head>
 <body>

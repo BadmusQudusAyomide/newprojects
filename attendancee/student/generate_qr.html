@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generate QR Code</title>
+    <link rel="stylesheet" href="css/student_style.css">
+</head>
+
+<body>
+    <h1>Generate QR Code</h1>
+    <form>
+        <input type="text" id="student_id" placeholder="Enter Student ID" required>
+        <input type="button" value="Generate QR Code" onclick="generateQRCode()">
+        <div id="qrcode"></div>
+        <a id="downloadLink" download="qrcode.png">Download QR Code</a>
+    </form>
+    <script src="../js/qrcode.min.js"></script>
+    <script src="../js/student_script.js"></script>
+</body>
+
+</html>

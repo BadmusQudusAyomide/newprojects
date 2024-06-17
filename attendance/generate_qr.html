@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR Code</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Generate QR Code</h1>
+    <form id="generateForm">
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id" required><br>
+        <input type="button" value="Generate QR Code" onclick="generateQRCode()">
+    </form>
+    <div id="qrcode"></div>
+
+    <script>
+        function generateQRCode() {
+            const studentId = document.getElementById('student_id').value;
+            const qrcodeContainer = document.getElementById('qrcode');
+            qrcodeContainer.innerHTML = '';
+            new QRCode(qrcodeContainer, studentId);
+        }
+    </script>
+</body>
+</html>

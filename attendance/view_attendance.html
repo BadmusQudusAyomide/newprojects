@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>View Attendance</h1>
+    <table id="attendanceTable">
+        <thead>
+            <tr>
+                            <th>Student ID</th>
+            <th>Name</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Attendance records will be dynamically inserted here -->
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('php/get_attendance.php')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector('#attendanceTable tbody');
+                data.forEach(record => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${record.student_id}</td><td>${record.name}</td><td>${record.date}</td>`;
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    });
+</script>
+</body>
+</html>
+

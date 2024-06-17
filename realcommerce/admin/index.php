@@ -25,6 +25,7 @@ include '../includes/functions.php';
                 <li><a href="manage_orders.php">Manage Orders</a></li>
                 <li><a href="manage_users.php">Manage Users</a></li>
                 <li><a href="admin_add_admin.php">Add New Admin</a></li>
+                <li><a href="profile.php">Profile</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </nav>

@@ -57,6 +57,7 @@ $user = $stmt->fetch();
 
 ?>
 <link rel="stylesheet" href="css/styless.css">
+<link rel="stylesheet" href="css/styles.css">
 <main>
     <section class="profile-section">
         <h2>User Profile</h2>

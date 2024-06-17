@@ -1,3 +1,4 @@
+
 <?php
 include 'includes/db_connect.php';
 
@@ -7,7 +8,7 @@ $products = $stmt->fetchAll();
 $pageTitle = "Home";
 include 'includes/header.php';
 ?>
-<link rel="stylesheet" href="css/styless.css">
+
 <main>
     <section class="hero">
         <div class="hero-content">
@@ -22,8 +23,7 @@ include 'includes/header.php';
         <div class="product-grid">
             <?php foreach ($products as $product): ?>
                 <div class="product-card">
-                    <img src="img/<?php echo htmlspecialchars($product['image']); ?>"
-                        alt="<?php echo htmlspecialchars($product['name']); ?>">
+                    <img src="img/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
                     <h4><?php echo htmlspecialchars($product['name']); ?></h4>
                     <p><?php echo htmlspecialchars($product['description']); ?></p>
                     <p>$<?php echo htmlspecialchars($product['price']); ?></p>

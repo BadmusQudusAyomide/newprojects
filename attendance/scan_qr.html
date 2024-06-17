@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan QR Code</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/html5-qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Scan QR Code</h1>
+    <div id="reader" style="width: 600px;"></div>
+    <div id="result"></div>
+
+    <script>
+        function onScanSuccess(decodedText) {
+            fetch('php/record_attendance.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ student_id: decodedText })
+            }).then(response => response.text()).then(result => {
+                document.getElementById('result').innerText = result;
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        function onScanFailure(error) {
+            console.warn(`QR code scan error: ${error}`);
+        }
+
+        const html5QrCode = new Html5Qrcode("reader");
+        html5QrCode.start({ facingMode: "environment" }, { fps: 10, qrbox: 250 }, onScanSuccess, onScanFailure);
+    </script>
+</body>
+</html>
